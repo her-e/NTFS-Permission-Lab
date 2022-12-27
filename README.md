@@ -49,4 +49,9 @@ Note: In this case, I already had partitioned drive. It is call "Data (G:)"
 <p align="center"> 
 <img src="https://imgur.com/vjeroGg.png"/>
 
-- Create new folder called "Shares" and share folder to everyone. Grant permission for "Everyone" to have full control. Then create sub-folders.
+- Create new folder called "Shares" and share folder to everyone. Grant permission for "Everyone" to have full control. Then create sub-folders like Tech, HR, Billings, etc.
+
+- In AD create Security Group to manage all shared folders (Admin access) and other Security Groups pertaining to the Job position priviledges. ACL groups are related to center location sub-folder file access.
+<p align="center"> 
+<img src="https://imgur.com/rdN9ZS3.png"/>
+
