@@ -17,18 +17,26 @@ The whole intention is getting ourselves a practice ground to get our hands dirt
 
 ## What is NTFS and Security Group and how does it work?
 
-Active Directory (AD) is a database and set of services that connect users with the network resources they need to get their work done.
+NT file system (NTFS), which is also sometimes called the New Technology File System, is a process that the Windows NT operating system uses for storing, organizing, and finding files on a hard disk efficiently.
 
-The database (or directory) contains critical information about your environment, including what users and computers there are and who is allowed to do what. For example, the database might list 100 user accounts with details like each person’s job title, phone number and password. It will also record their permissions.
+- Performance: NTFS allows file compression so your organization can enjoy increased storage space on a disk.
+- Security access control: NTFS will enable you to place permissions on files and folders so you can restrict access to mission-critical data.
+- Reliability: NTFS focuses on the consistency of the file system so that in the event of a disaster (such as a power loss or system failure), you can quickly restore your data.
+- Disk space utilization: In addition to file compression, NTFS also allows disk quotas. This feature enables businesses to have even more control over storage space.
+- File system journaling: This means that you can easily keep a log of⁠—and audit⁠—the files added, modified, or deleted on a drive. This log is called the Master File Table (MFT).
 
-These services control much of the activity that goes on an IT environment.
+The technical breakdown of NTFS is as follow
 
-The main Active Directory service is Active Directory Domain Services (AD DS), which is part of the Windows Server operating system. The servers that run AD DS are called domain controllers (DC’s). Organizations normally have multiple DC's, and each one has a copy of the directory for the entire domain. Changes made to the directory on one domain controller — such as password update or the deletion of a user account — are replicated to the other DC’s so they all stay up to date. Desktops, laptops and other devices running Windows (rather than Windows Server) can be part of an Active Directory environment, but they do not run AD DS. AD DS relies on several established protocols and standards, including LDAP (Lightweight Directory Access Protocol), Kerberos and DNS (Domain Name System).
+A hard disk is formatted
+A file gets divided into partitions within the hard disk
+Within each partition, the operating system tracks every file stored in a specific operating system
+Each file is distributed and stored in one or more clusters or disk spaces of a predefined uniform size (on the hard disk)
+The size of each cluster will range from 512 bytes to 64 kilobytes
 
-It’s important to understand that Active Directory is only for on-premises Microsoft environments. AD and Azure AD are separate but can work together to some degree if your organization has both on-premises and cloud IT environments (a hybrid deployment).
+For Security Group, there are several built-in accounts, and security groups are preconfigured with the appropriate rights and permissions to perform tasks. Users given the correct Access Control List (ACL), users can access permissions to specific tasks.
 
 </p>
 
-[Source](https://www.quest.com/solutions/active-directory/what-is-active-directory.aspx#:~:text=Active%20Directory%20(AD)%20is%20a,who%27s%20allowed%20to%20do%20what.)
+[Source](https://www.datto.com/blog/what-is-ntfs-and-how-does-it-work)
 
 <br>
