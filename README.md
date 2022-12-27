@@ -41,7 +41,7 @@ For Security Group, there are several built-in accounts, and security groups are
 
 <br>
 
-## NTFS configuration
+## NTFS Permission Management
 - Install "File Server" under "File and Storage Services" in Add Roles and Features
 
 - Navigate to "Computer Management" and shrink C-Drive to partition drive. (Shrink 5 GB and assign drive letter) <br/>
@@ -51,7 +51,21 @@ Note: In this case, I already had partitioned drive. It is call "Data (G:)"
 
 - Create new folder called "Shares" and share folder to everyone. Grant permission for "Everyone" to have full control. Then create sub-folders like Tech, HR, Billings, etc.
 
-- In AD create Security Group to manage all shared folders (Admin access) and other Security Groups pertaining to the Job position priviledges. ACL groups are related to center location sub-folder file access.
+- In AD create a Security Group to manage all shared folders (Admin access) and other Security Groups pertaining to the Job position priviledges within Organizational Unit (OU). ACL Security Groups are related to center location sub-folder file access.
 <p align="center"> 
 <img src="https://imgur.com/rdN9ZS3.png"/>
 
+- Update Folder Owner to Domain Admin Security Group (sf-administration). Remove all other permission access to the shared folder. Add Security Group (sf-administration) and Domain Users.
+<p align="center"> 
+<img src="https://imgur.com/oH9psTe.png"/>
+
+- Repeat steps with the sub-folders within the shared folders give them certain Security Group access. Also configure Read and Write ability for user access.
+
+## Create Mapped Drive via Group Policy.
+<p align="center"> 
+<img src="https://imgur.com/ZIRpihu.png"/>
+
+- Grant Security Group Permission to users pertaining to their Job Position using Identity & Access. <br/>
+For Example: "Office", "Company", "Job Title" (Registered Nurse in this Case), EmployeeID in "Attribute Editor", and "Member of" tab
+
+<img src="https://imgur.com/nC9QoIG.png"/><img src="https://imgur.com/VyQbvbZ.png"/><img src="https://imgur.com/MSyu9mv.png"/><img src="https://imgur.com/GSP7Tim.png"/>
