@@ -40,3 +40,6 @@ For Security Group, there are several built-in accounts, and security groups are
 [Source](https://www.datto.com/blog/what-is-ntfs-and-how-does-it-work)
 
 <br>
+
+## NTFS configuration
+- Install "File Server" under "File and Storage Services" in Add Roles and Features
