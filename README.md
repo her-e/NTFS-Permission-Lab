@@ -43,3 +43,10 @@ For Security Group, there are several built-in accounts, and security groups are
 
 ## NTFS configuration
 - Install "File Server" under "File and Storage Services" in Add Roles and Features
+
+- Navigate to "Computer Management" and shrink C-Drive to partition drive. (Shrink 5 GB and assign drive letter) <br/>
+Note: In this case, I already had partitioned drive. It is call "Data (G:)"
+<p align="center"> 
+<img src="https://imgur.com/vjeroGg.png"/>
+
+- Create new folder called "Shares" and share folder to everyone. Grant permission for "Everyone" to have full control. Then create sub-folders.
