@@ -66,6 +66,19 @@ Note: In this case, I already had partitioned drive. It is call "Data (G:)"
 <img src="https://imgur.com/ZIRpihu.png"/>
 
 - Grant Security Group Permission to users pertaining to their Job Position using Identity & Access. <br/>
-For Example: "Office", "Company", "Job Title" (Registered Nurse in this Case), EmployeeID in "Attribute Editor", and "Member of" tab
+For Example: "Office", "Company", "Job Title", EmployeeID in "Attribute Editor", and "Member of" tab <br/>
+- In this scenario, our user will be from location Beaverton - 002, Registered Nurse, and needing access to eMAR files from 002.
 
 <img src="https://imgur.com/nC9QoIG.png"/><img src="https://imgur.com/VyQbvbZ.png"/><img src="https://imgur.com/MSyu9mv.png"/><img src="https://imgur.com/GSP7Tim.png"/>
+
+- Control Panel > Security and Maintenance > Windows Defender Firewall > Allow an app through Windows Firewall > Enable Remote Scheduled Task Management
+- Run Group Policy update to have all domain joined workstation be updated with the new Group Policy using Powershells
+
+Powershell explaination: Store into variable and Force Group Policy Update with zero time delay. <br/>
+Powershells Script: <br/>
+<B>$computers = Get-ADComputer -Filter * <br/>
+$computers | ForEach-Object -Process {Invoke-GPUpdate -Computer $_.name -RandomDelayInMinutes 0 -Force} <B>
+<img src="https://imgur.com/xWTfMkB.png"/>
+
+
+
