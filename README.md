@@ -27,11 +27,16 @@ NT file system (NTFS), which is also sometimes called the New Technology File Sy
 
 The technical breakdown of NTFS is as follow
 
-A hard disk is formatted
-A file gets divided into partitions within the hard disk
-Within each partition, the operating system tracks every file stored in a specific operating system
-Each file is distributed and stored in one or more clusters or disk spaces of a predefined uniform size (on the hard disk)
-The size of each cluster will range from 512 bytes to 64 kilobytes
+1. A hard disk is formatted
+2. A file gets divided into partitions within the hard disk
+3. Within each partition, the operating system tracks every file stored in a specific operating system
+4. Each file is distributed and stored in one or more clusters or disk spaces of a predefined uniform size (on the hard disk)
+5. The size of each cluster will range from 512 bytes to 64 kilobytes
+
+You can control the size of a cluster size based on what’s most important to your organization: <br/>
+
+- Efficient use of disk space.
+- The number of disk accesses required to access a file.
 
 For Security Group, there are several built-in accounts, and security groups are preconfigured with the appropriate rights and permissions to perform tasks. Users given the correct Access Control List (ACL), users can access permissions to specific tasks.
 
