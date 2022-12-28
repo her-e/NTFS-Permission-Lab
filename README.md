@@ -83,7 +83,7 @@ $computers | ForEach-Object -Process {Invoke-GPUpdate -Computer $_.name -RandomD
 <p align="center"> 
 <img src="https://imgur.com/61v7a0b.png"/>
 
-- Verify Access to eMAR File.
+- Log into Registered Nurse end-user account and verify Access to eMAR File.
 <p align="center"> 
 <img src="https://imgur.com/TdgpVAG.png"/>
 
